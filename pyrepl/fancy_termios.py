@@ -18,6 +18,7 @@
 # CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 import termios
+import logging
 
 class TermState:
     def __init__(self, tuples):
@@ -31,7 +32,10 @@ class TermState:
         return self.__class__(self.as_list())
 
 def tcgetattr(fd):
-    return TermState(termios.tcgetattr(fd))
+    try:
+        return TermState(termios.tcgetattr(fd))
+    except Exception as err:
+        logging.error('err: {}\nfd: {}\ntermios.tcgetattr: {}'.format(err, fd, termios.tcgetattr(fd)), exc_info=True)
 
 def tcsetattr(fd, when, attrs):
     termios.tcsetattr(fd, when, attrs.as_list())
