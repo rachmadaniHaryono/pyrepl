@@ -36,6 +36,7 @@ def tcgetattr(fd):
         return TermState(termios.tcgetattr(fd))
     except termios.error as err:
         logging.error('err: {}\nfd: {}'.format(err, fd), exc_info=True)
+        raise err
 
 def tcsetattr(fd, when, attrs):
     termios.tcsetattr(fd, when, attrs.as_list())
