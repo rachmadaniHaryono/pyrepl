@@ -16,4 +16,5 @@ if os.getenv('PYTHONSTARTUP'):
     exec(open(os.getenv('PYTHONSTARTUP')).read())
 
 print('Python', sys.version)
-run_multiline_interactive_console()
+if __name__ == '__main__':
+    run_multiline_interactive_console()
