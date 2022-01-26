@@ -19,19 +19,19 @@
 # CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
 # CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-import locale, pdb, sys
-# I forget exactly why this is necessary:
-try:
-    locale.setlocale(locale.LC_ALL, '')
-except locale.Error:
-    pass # oh well
+if __name__ == "__main__":
+    import locale, pdb, sys
 
+    # I forget exactly why this is necessary:
+    try:
+        locale.setlocale(locale.LC_ALL, "")
+    except locale.Error:
+        pass  # oh well
 
-from pyrepl.python_reader import main
-from pyrepl import cmdrepl
+    from pyrepl.python_reader import main
+    from pyrepl import cmdrepl
 
-# whizzy feature:  graft pyrepl support onto pdb
-#pdb.Pdb = cmdrepl.replize(pdb.Pdb, 1)
+    # whizzy feature:  graft pyrepl support onto pdb
+    # pdb.Pdb = cmdrepl.replize(pdb.Pdb, 1)
 
-if __name__ == '__main__':
-    main(use_pygame_console=('pg' in sys.argv))
+    main(use_pygame_console=("pg" in sys.argv))

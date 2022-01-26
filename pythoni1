@@ -7,14 +7,14 @@ multiline input and multiline history entries.
 import os
 import sys
 
-from pyrepl import readline
-from pyrepl.simple_interact import run_multiline_interactive_console
+if __name__ == "__main__":
+    from pyrepl import readline
+    from pyrepl.simple_interact import run_multiline_interactive_console
 
-sys.modules['readline'] = readline
+    sys.modules["readline"] = readline
 
-if os.getenv('PYTHONSTARTUP'):
-    exec(open(os.getenv('PYTHONSTARTUP')).read())
+    if os.getenv("PYTHONSTARTUP"):
+        exec(open(os.getenv("PYTHONSTARTUP")).read())
 
-print('Python', sys.version)
-if __name__ == '__main__':
+    print("Python", sys.version)
     run_multiline_interactive_console()
