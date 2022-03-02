@@ -64,7 +64,7 @@ Summary of 0.8.2:
    http://bitbucket.org/antocuni/fancycompleter
 
 Summary of 0.8.1:
- + Fixes 
+ + Fixes
    - in the area of unbound keys and unknown commands
    - in quoted-insert
    - in unicode support
@@ -80,9 +80,9 @@ Summary of 0.8.1:
 
 Summary of 0.8.0:
  + A whole bundle of things.
-   - unicode support (although working out what encoding the terminal 
+   - unicode support (although working out what encoding the terminal
      is using can be "tricky")
-   - internal rearchitecting 
+   - internal rearchitecting
    - probably a bunch of new bugs...
  + Development and web-presence moved to codespeak.net
 
@@ -108,4 +108,3 @@ Summary of new stuff in 0.7.0:
    written any of these yet!).
  + A prototypical pygame console.
            -- see CHANGES for more details and older news
-
