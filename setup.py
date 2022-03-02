@@ -33,7 +33,7 @@ command line interfaces, featuring:
 setup(
     name="pyrepl",
     setup_requires="setupmeta",
-    versioning="devcommit",
+    version="0.9.1rc0",
     author="Michael Hudson-Doyle",
     author_email="micahel@gmail.com",
     maintainer="Daniel Hahler",
