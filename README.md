@@ -22,7 +22,9 @@ it, and use it as my python top-level most of the time.
 
 To get a feel for it, just execute:
 
+```shell
 $ python pythoni
+```
 
 (One point that may confuse: because the arrow keys are used to move
 up and down in the command currently being edited, you need to use ^P
@@ -30,26 +32,29 @@ and ^N to move through the history)
 
 If you like what you see, you can install it with the familiar
 
+```shell
 $ python setup.py install
+```
 
 which will also install the above "pythoni" script.
 
+## summary
 
-Summary of 0.8.4:
+### Summary of 0.8.4:
 
  + python3 support
  + support for more readline hooks
  + backport various fixes from pypy
  + gracefully break on sys.stdout.close()
 
-Summary of 0.8.3:
+### Summary of 0.8.3:
 
  + First release from new home on bitbucket.
  + Various fixes to pyrepl.readline.
  + Allow pyrepl to run if unicodedata is unimportable.
 
 
-Summary of 0.8.2:
+### Summary of 0.8.2:
 
  + This is the same version which is distributed with PyPy 1.4, which uses it
    as its default interactive interpreter:
@@ -63,22 +68,24 @@ Summary of 0.8.2:
  + Add support for colored completions: see e.g. fancycomplete:
    http://bitbucket.org/antocuni/fancycompleter
 
-Summary of 0.8.1:
+### Summary of 0.8.1:
  + Fixes
    - in the area of unbound keys and unknown commands
    - in quoted-insert
    - in unicode support
  + make Reader and subclasses new-style classes
+   - needed to slightly change the way keymaps are built
    - make the inheritance hierachy look like this
+     - Turns out I've been wanting new-style classes since before they existed!
+```
                      Reader
                     /      \
       HistoricalReader   CompletingReader
                     \      /
                 PythonicReader
-     Turns out I've been wanting new-style classes since before they existed!
-   - needed to slightly change the way keymaps are built
+```
 
-Summary of 0.8.0:
+### Summary of 0.8.0:
  + A whole bundle of things.
    - unicode support (although working out what encoding the terminal
      is using can be "tricky")
@@ -86,10 +93,10 @@ Summary of 0.8.0:
    - probably a bunch of new bugs...
  + Development and web-presence moved to codespeak.net
 
-Summary of new stuff in 0.7.1:
+### Summary of new stuff in 0.7.1:
  + A non-broken setup.py...
 
-Summary of new stuff in 0.7.0:
+### Summary of new stuff in 0.7.0:
  + Moved to a package architecture.
  + Wrote a (very simple!) distutils setup.py script.
  + Changed the keyspec format to be more sensible.  See the docstring
@@ -107,4 +114,7 @@ Summary of new stuff in 0.7.0:
    probably require small modifications (but I'm not sure anyone has
    written any of these yet!).
  + A prototypical pygame console.
-           -- see CHANGES for more details and older news
+
+### Other versions summary
+
+ see CHANGES for more details and older news
